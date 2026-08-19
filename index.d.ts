@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,28 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Collection } from '@stdlib/types/array';
 
 /**
-* Initialize a workspace array for performing a complex-valued Fourier transform.
+* Initializes a workspace array for performing a complex-valued Fourier transform.
 *
-* @module @stdlib/fft-base-fftpack-generic-cffti
+* ## Notes
+*
+* -   The workspace array should have a length of at least `( 4*N ) + 34` elements.
+* -   For single-point sequences (N=1), the function returns immediately as the FFT is the identity operation.
+*
+* @param N - length of the sequence
+* @param workspace - workspace array
+* @param strideW - stride length for `workspace`
+* @param offsetW - starting index for `workspace`
+* @returns workspace array
 *
 * @example
 * var Float64Array = require( '@stdlib/array-float64' );
-* var cffti = require( '@stdlib/fft-base-fftpack-generic-cffti' );
 *
 * var N = 8;
 * var workspace = new Float64Array( ( 4*N ) + 34 );
@@ -42,12 +54,9 @@
 * var factors = workspace.slice( 4*N, ( 4*N ) + 4 );
 * // returns <Float64Array>[ 8, 2, 2, 4 ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function cffti<T extends Collection<number>>( N: number, workspace: T, strideW: number, offsetW: number ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = cffti;
