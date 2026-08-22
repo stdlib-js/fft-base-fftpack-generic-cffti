@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-19)
+## Unreleased (2026-08-22)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`c73f866`](https://github.com/stdlib-js/stdlib/commit/c73f86675a6df924935f57900761dd51424e8c72) - **docs:** use correct format specifier [(#14492)](https://github.com/stdlib-js/stdlib/pull/14492) _(by Gunj Joshi)_
 -   [`a75dd0a`](https://github.com/stdlib-js/stdlib/commit/a75dd0a629c8081e9484dbd34494ca369bc8a7b9) - **feat:** add `fft/base/fftpack/generic/cffti` _(by Gunj Joshi)_
 
 </details>
